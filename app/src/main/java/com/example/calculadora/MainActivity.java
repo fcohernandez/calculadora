@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private int suma;
     private int resta;
     private int operacion = 0;
+    private String operando = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,80 +43,81 @@ public class MainActivity extends AppCompatActivity {
         botonCero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonCero.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonCero.getText().toString();
+                resultado.setText(operando);
+
             }
         });
 
         botonUno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonUno.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonUno.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonDos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonDos.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonDos.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonTres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonTres.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonTres.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonCuatro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonCuatro.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonCuatro.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonCinco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonCinco.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonCinco.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonSeis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonSeis.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonSeis.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonSiete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonSiete.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonSiete.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonOcho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonOcho.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonOcho.getText().toString();
+                resultado.setText(operando);
             }
         });
 
         botonNueve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = botonNueve.getText().toString();
-                resultado.setText(res);
+                operando = operando + botonNueve.getText().toString();
+                resultado.setText(operando);
             }
         });
 
@@ -123,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String res = resultado.getText().toString();
+                operando = "";
                 suma = Integer.parseInt(res) + suma;
                 operacion = 1;
 
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String res = resultado.getText().toString();
+                operando = "";
                 resta = Integer.parseInt(res) - resta;
                 operacion = 2;
             }
@@ -154,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                         res = Integer.toString((resta - Integer.parseInt(ress)));
                         resta = 0;
                         break;
-                    
+
                         default:
                             break;
                 }
